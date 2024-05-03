@@ -6,7 +6,6 @@ st.title("videos")
 tab1, tab2 = st.tabs(["コード", "実行結果"])
 
 with tab1:
-    st.write("実行結果")
     st.code(
         """
         from duckduckgo_search import DDGS
@@ -27,6 +26,7 @@ with tab1:
 
 with tab2:
     if st.button("Search"):
+        st.write("実行結果")
         results = DDGS().videos(
             keywords="cars",
             region="jp-jp",

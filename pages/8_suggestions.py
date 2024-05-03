@@ -19,5 +19,6 @@ with tab1:
 
 with tab2:
     if st.button("Search"):
+        st.write("実行結果")
         results = DDGS().suggestions("分析", region="jp-jp")
         st.write(results)
