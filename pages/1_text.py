@@ -15,8 +15,10 @@ with tab1:
         print(results)
         """
     )
-    st.info("日本語の検索結果を取得する場合は、region='jp-jp'を指定します。")
-    st.info("max_resultsで取得する検索結果の数を指定できます。")
+    with st.expander("引数に関する補足"):
+        st.write(
+            "日本語の検索結果を取得する場合は、region='jp-jp'を指定します。  \nmax_resultsで取得する検索結果の数を指定できます。"
+        )
 
 with tab2:
     if st.button("Search"):

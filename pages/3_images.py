@@ -12,37 +12,26 @@ with tab1:
         from duckduckgo_search import DDGS
 
         results = DDGS().images(
-            keywords="トヨタ",
+            keywords="DuckDuckGo",
             region="jp-jp",
             safesearch="moderate",
-            size=None,
-            color="Monochrome",
-            type_image=None,
-            layout=None,
-            license_image=None,
-            max_results=5,
+            max_results=1,
         )
 
         print(results)
         """
     )
-    with st.expander("See explanation"):
-        st.info("keywordsで検索キーワードを指定します。(日本語でも大丈夫です。)")
-        st.info("safesearchで検索結果の安全性を指定できます。on | moderate | off")
-        st.info("日本語の検索結果を取得する場合は、region='jp-jp'を指定します。")
-        st.info("max_resultsで取得する検索結果の数を指定できます。")
+    with st.expander("引数に関する補足"):
+        st.write(
+            "keywordsで検索キーワードを指定します。(日本語でも大丈夫です。)  \nsafesearchで検索結果の安全性を指定できます。on | moderate | off  \n日本語の検索結果を取得する場合は、region='jp-jp'を指定します。  \nmax_resultsで取得する検索結果の数を指定できます。"
+        )
 
 with tab2:
     if st.button("Search"):
         results = DDGS().images(
-            keywords="トヨタ",
+            keywords="DuckDuckGo",
             region="jp-jp",
             safesearch="moderate",
-            size=None,
-            color="Monochrome",
-            type_image=None,
-            layout=None,
-            license_image=None,
             max_results=1,
         )
         st.write(results)

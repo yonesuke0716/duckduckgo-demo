@@ -9,7 +9,10 @@ docker image build -t duckduckgo .
 
 ## 実行方法
 ```
+(Linux, Mac)
 docker container run --rm -it -v $(pwd):/app -p 8501:8501 duckduckgo bash
+(Windows)
+docker container run --rm -it -v %cd%:/app -p 8501:8501 duckduckgo bash
 streamlit run home.py
 ```
 

@@ -16,9 +16,10 @@ with tab1:
         print(results)
         """
     )
-    st.warning(
-        "引数に日本語を与えても検索結果がうまく返ってこないため、使用する場合は英語を与えましょう。"
-    )
+    with st.expander("引数に関する補足"):
+        st.warning(
+            "引数に日本語を与えても検索結果がうまく返ってこないため、使用する場合は英語を与えましょう。"
+        )
 
 with tab2:
     if st.button("Search"):
